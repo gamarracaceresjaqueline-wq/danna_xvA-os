@@ -886,10 +886,16 @@
       }
     }
 
+if (music) {
     music.addEventListener("ended", () => {
-      musicButtonText.textContent = "Activar música de fondo";
-      musicIcon.textContent = "♫";
+        if (musicButtonText) {
+            musicButtonText.textContent = "Activar música de fondo";
+        }
+        if (musicIcon) {
+            musicIcon.textContent = "♫";
+        }
     });
+}
 
     // CUENTA REGRESIVA: 31 DE OCTUBRE DE 2026 A LAS 19:00
     const eventDate = new Date(2026, 9, 31, 19, 0, 0).getTime();
